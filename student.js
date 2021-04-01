@@ -132,10 +132,8 @@ async function subscribe(user, mediaType) {
 
 function handleUserPublished(user, mediaType) {
   const id = user.uid;
-  if(id==1000){
-    remoteUsers[id] = user;
-    subscribe(user, mediaType);  
-  }
+  remoteUsers[id] = user;
+  subscribe(user, mediaType);  
 }
 
 function handleUserUnpublished(user) {
